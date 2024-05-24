@@ -4,7 +4,8 @@
   "info": {
     "singularName": "download",
     "pluralName": "downloads",
-    "displayName": "Downloads"
+    "displayName": "Downloads",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,6 +25,13 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

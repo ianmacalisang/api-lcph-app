@@ -805,6 +805,7 @@ export interface ApiBookBook extends Schema.CollectionType {
     tags: Attribute.Enumeration<['promotions', 'ebook']> &
       Attribute.DefaultTo<'ebook'>;
     description: Attribute.RichText;
+    thumbnail: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -858,6 +859,7 @@ export interface ApiDownloadDownload extends Schema.CollectionType {
     singularName: 'download';
     pluralName: 'downloads';
     displayName: 'Downloads';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -871,6 +873,7 @@ export interface ApiDownloadDownload extends Schema.CollectionType {
       'api::course.course'
     >;
     description: Attribute.RichText;
+    thumbnail: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

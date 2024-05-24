@@ -33,6 +33,13 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
