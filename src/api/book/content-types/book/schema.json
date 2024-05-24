@@ -15,14 +15,6 @@
     "name": {
       "type": "string"
     },
-    "file": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "files"
-      ]
-    },
     "tags": {
       "type": "enumeration",
       "enum": [
@@ -35,11 +27,15 @@
       "type": "richtext"
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "file": {
+      "type": "string"
     }
   }
 }

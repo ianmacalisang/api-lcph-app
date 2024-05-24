@@ -801,11 +801,11 @@ export interface ApiBookBook extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String;
-    file: Attribute.Media;
     tags: Attribute.Enumeration<['promotions', 'ebook']> &
       Attribute.DefaultTo<'ebook'>;
     description: Attribute.RichText;
     thumbnail: Attribute.Media;
+    file: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
