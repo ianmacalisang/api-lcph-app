@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_reusables_modules",
+  "info": {
+    "displayName": "Modules",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "lessons": {
+      "displayName": "lessons",
+      "type": "component",
+      "repeatable": true,
+      "component": "reusables.lessons"
+    }
+  }
+}

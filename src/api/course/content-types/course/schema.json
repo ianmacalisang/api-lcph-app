@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "Courses",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "modules": {
+      "displayName": "modules",
+      "type": "component",
+      "repeatable": true,
+      "component": "reusables.modules"
+    },
+    "students": {
+      "type": "integer"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "enumeration",
+      "enum": [
+        "promotions",
+        "courses"
+      ],
+      "default": "courses"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
