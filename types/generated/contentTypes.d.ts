@@ -900,16 +900,17 @@ export interface ApiHomeHome extends Schema.SingleType {
     singularName: 'home';
     pluralName: 'homes';
     displayName: 'Home';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     name: Attribute.String;
-    content: Attribute.Blocks;
     cta: Attribute.String;
     media: Attribute.Media;
     description: Attribute.Text;
+    content: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -945,7 +946,7 @@ export interface ApiStoreStore extends Schema.SingleType {
       'oneToMany',
       'api::book.book'
     >;
-    content: Attribute.Blocks;
+    content: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

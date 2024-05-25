@@ -16,12 +16,13 @@
       "type": "string"
     },
     "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "videos",
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "description": {
       "type": "text"
@@ -37,7 +38,7 @@
       "target": "api::book.book"
     },
     "content": {
-      "type": "blocks"
+      "type": "richtext"
     }
   }
 }
