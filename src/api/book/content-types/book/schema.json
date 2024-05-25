@@ -40,6 +40,11 @@
     "price": {
       "type": "decimal",
       "default": 0
+    },
+    "reviews": {
+      "type": "component",
+      "repeatable": true,
+      "component": "frontend.reviews"
     }
   }
 }

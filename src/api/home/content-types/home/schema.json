@@ -36,11 +36,22 @@
       "type": "richtext"
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "frontend.faq"
+    },
+    "reviews": {
+      "type": "component",
+      "repeatable": true,
+      "component": "frontend.reviews"
     }
   }
 }
