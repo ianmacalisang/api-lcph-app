@@ -806,6 +806,7 @@ export interface ApiBookBook extends Schema.CollectionType {
     description: Attribute.RichText;
     thumbnail: Attribute.Media;
     file: Attribute.String;
+    price: Attribute.Decimal & Attribute.DefaultTo<0>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -835,6 +836,7 @@ export interface ApiCourseCourse extends Schema.CollectionType {
     tags: Attribute.Enumeration<['promotions', 'courses']> &
       Attribute.DefaultTo<'courses'>;
     description: Attribute.RichText;
+    price: Attribute.Decimal & Attribute.DefaultTo<0>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

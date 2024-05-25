@@ -42,6 +42,10 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "price": {
+      "type": "decimal",
+      "default": 0
     }
   }
 }

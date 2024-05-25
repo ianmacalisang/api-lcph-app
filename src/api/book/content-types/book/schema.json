@@ -36,6 +36,10 @@
     },
     "file": {
       "type": "string"
+    },
+    "price": {
+      "type": "decimal",
+      "default": 0
     }
   }
 }
