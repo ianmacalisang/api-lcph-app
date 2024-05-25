@@ -908,9 +908,10 @@ export interface ApiHomeHome extends Schema.SingleType {
   attributes: {
     name: Attribute.String;
     cta: Attribute.String;
-    media: Attribute.Media;
+    banner: Attribute.Media;
     description: Attribute.Text;
     content: Attribute.RichText;
+    thumbnail: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -934,7 +935,7 @@ export interface ApiStoreStore extends Schema.SingleType {
   };
   attributes: {
     name: Attribute.String;
-    media: Attribute.Media;
+    banner: Attribute.Media;
     description: Attribute.Text;
     courses: Attribute.Relation<
       'api::store.store',

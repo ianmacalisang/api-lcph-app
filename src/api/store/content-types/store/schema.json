@@ -15,9 +15,9 @@
     "name": {
       "type": "string"
     },
-    "media": {
+    "banner": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "videos",

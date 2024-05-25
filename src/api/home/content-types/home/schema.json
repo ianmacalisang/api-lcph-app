@@ -18,9 +18,9 @@
     "cta": {
       "type": "string"
     },
-    "media": {
+    "banner": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
@@ -34,6 +34,13 @@
     },
     "content": {
       "type": "richtext"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
