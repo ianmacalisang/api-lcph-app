@@ -894,6 +894,50 @@ export interface ApiDownloadDownload extends Schema.CollectionType {
   };
 }
 
+export interface ApiStoreStore extends Schema.SingleType {
+  collectionName: 'stores';
+  info: {
+    singularName: 'store';
+    pluralName: 'stores';
+    displayName: 'Store';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    media: Attribute.Media;
+    description: Attribute.Text;
+    courses: Attribute.Relation<
+      'api::store.store',
+      'oneToMany',
+      'api::course.course'
+    >;
+    ebooks: Attribute.Relation<
+      'api::store.store',
+      'oneToMany',
+      'api::book.book'
+    >;
+    content: Attribute.Blocks;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::store.store',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::store.store',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -915,6 +959,7 @@ declare module '@strapi/types' {
       'api::book.book': ApiBookBook;
       'api::course.course': ApiCourseCourse;
       'api::download.download': ApiDownloadDownload;
+      'api::store.store': ApiStoreStore;
     }
   }
 }
