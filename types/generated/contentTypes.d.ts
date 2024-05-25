@@ -894,6 +894,32 @@ export interface ApiDownloadDownload extends Schema.CollectionType {
   };
 }
 
+export interface ApiHomeHome extends Schema.SingleType {
+  collectionName: 'homes';
+  info: {
+    singularName: 'home';
+    pluralName: 'homes';
+    displayName: 'Home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    content: Attribute.Blocks;
+    cta: Attribute.String;
+    media: Attribute.Media;
+    description: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiStoreStore extends Schema.SingleType {
   collectionName: 'stores';
   info: {
@@ -959,6 +985,7 @@ declare module '@strapi/types' {
       'api::book.book': ApiBookBook;
       'api::course.course': ApiCourseCourse;
       'api::download.download': ApiDownloadDownload;
+      'api::home.home': ApiHomeHome;
       'api::store.store': ApiStoreStore;
     }
   }
