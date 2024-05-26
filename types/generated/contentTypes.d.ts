@@ -961,17 +961,8 @@ export interface ApiStoreStore extends Schema.SingleType {
     name: Attribute.String;
     banner: Attribute.Media;
     description: Attribute.Text;
-    courses: Attribute.Relation<
-      'api::store.store',
-      'oneToMany',
-      'api::course.course'
-    >;
-    ebooks: Attribute.Relation<
-      'api::store.store',
-      'oneToMany',
-      'api::book.book'
-    >;
     content: Attribute.RichText;
+    promos: Attribute.Component<'frontend.promotions'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

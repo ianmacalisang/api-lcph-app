@@ -27,18 +27,14 @@
     "description": {
       "type": "text"
     },
-    "courses": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::course.course"
-    },
-    "ebooks": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::book.book"
-    },
     "content": {
       "type": "richtext"
+    },
+    "promos": {
+      "displayName": "Promotions",
+      "type": "component",
+      "repeatable": false,
+      "component": "frontend.promotions"
     }
   }
 }

@@ -11,6 +11,30 @@ export interface FrontendFaq extends Schema.Component {
   };
 }
 
+export interface FrontendPromotions extends Schema.Component {
+  collectionName: 'components_frontend_promotions';
+  info: {
+    displayName: 'Promotions';
+  };
+  attributes: {
+    name: Attribute.String;
+    description: Attribute.RichText;
+    pricing: Attribute.Decimal;
+    thumbnail: Attribute.Media;
+    validity: Attribute.Date;
+    courses: Attribute.Relation<
+      'frontend.promotions',
+      'oneToMany',
+      'api::course.course'
+    >;
+    books: Attribute.Relation<
+      'frontend.promotions',
+      'oneToMany',
+      'api::book.book'
+    >;
+  };
+}
+
 export interface FrontendReviews extends Schema.Component {
   collectionName: 'components_frontend_reviews';
   info: {
@@ -52,6 +76,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'frontend.faq': FrontendFaq;
+      'frontend.promotions': FrontendPromotions;
       'frontend.reviews': FrontendReviews;
       'reusables.lessons': ReusablesLessons;
       'reusables.modules': ReusablesModules;
