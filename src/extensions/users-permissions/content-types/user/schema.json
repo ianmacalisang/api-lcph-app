@@ -99,6 +99,9 @@
     },
     "lastName": {
       "type": "string"
+    },
+    "phone": {
+      "type": "string"
     }
   }
 }
