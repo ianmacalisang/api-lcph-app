@@ -828,6 +828,7 @@ export interface ApiBookBook extends Schema.CollectionType {
     file: Attribute.String;
     price: Attribute.Decimal & Attribute.DefaultTo<0>;
     reviews: Attribute.Component<'frontend.reviews', true>;
+    excerpt: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -859,6 +860,7 @@ export interface ApiCourseCourse extends Schema.CollectionType {
     description: Attribute.RichText;
     price: Attribute.Decimal & Attribute.DefaultTo<0>;
     reviews: Attribute.Component<'frontend.reviews', true>;
+    excerpt: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
