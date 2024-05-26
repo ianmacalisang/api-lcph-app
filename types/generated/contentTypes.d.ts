@@ -742,7 +742,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -771,6 +770,26 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    proof: Attribute.Media;
+    facebookProfile: Attribute.String;
+    receipt: Attribute.String;
+    courses: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToMany',
+      'api::course.course'
+    >;
+    downloads: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToMany',
+      'api::download.download'
+    >;
+    books: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToMany',
+      'api::book.book'
+    >;
+    firstName: Attribute.String;
+    lastName: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
