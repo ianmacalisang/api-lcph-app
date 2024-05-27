@@ -15,6 +15,7 @@ export interface FrontendPromotions extends Schema.Component {
   collectionName: 'components_frontend_promotions';
   info: {
     displayName: 'Promotions';
+    description: '';
   };
   attributes: {
     name: Attribute.String;
@@ -31,6 +32,11 @@ export interface FrontendPromotions extends Schema.Component {
       'frontend.promotions',
       'oneToMany',
       'api::book.book'
+    >;
+    downloads: Attribute.Relation<
+      'frontend.promotions',
+      'oneToMany',
+      'api::download.download'
     >;
   };
 }
