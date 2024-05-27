@@ -52,6 +52,11 @@
       "type": "component",
       "repeatable": true,
       "component": "frontend.reviews"
+    },
+    "promotion": {
+      "type": "component",
+      "repeatable": false,
+      "component": "frontend.promotions"
     }
   }
 }

@@ -938,6 +938,7 @@ export interface ApiHomeHome extends Schema.SingleType {
     thumbnail: Attribute.Media;
     faq: Attribute.Component<'frontend.faq', true>;
     reviews: Attribute.Component<'frontend.reviews', true>;
+    promotion: Attribute.Component<'frontend.promotions'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
