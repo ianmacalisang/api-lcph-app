@@ -933,12 +933,12 @@ export interface ApiHomeHome extends Schema.SingleType {
     name: Attribute.String;
     cta: Attribute.String;
     banner: Attribute.Media;
-    description: Attribute.Text;
     content: Attribute.RichText;
     thumbnail: Attribute.Media;
     faq: Attribute.Component<'frontend.faq', true>;
     reviews: Attribute.Component<'frontend.reviews', true>;
     promotion: Attribute.Component<'frontend.promotions'>;
+    description: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

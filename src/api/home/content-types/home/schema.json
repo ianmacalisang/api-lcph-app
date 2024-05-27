@@ -29,9 +29,6 @@
         "audios"
       ]
     },
-    "description": {
-      "type": "text"
-    },
     "content": {
       "type": "richtext"
     },
@@ -57,6 +54,9 @@
       "type": "component",
       "repeatable": false,
       "component": "frontend.promotions"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
