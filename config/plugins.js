@@ -1,16 +1,18 @@
 module.exports = ({ env }) => ({
   upload: {
     config: {
-      provider: "cloudinary",
+      provider: "strapi-provider-ftp-upload",
       providerOptions: {
-        cloud_name: env("CLOUDINARY_NAME"),
-        api_key: env("CLOUDINARY_KEY"),
-        api_secret: env("CLOUDINARY_SECRET"),
-      },
-      actionOptions: {
-        upload: {},
-        uploadStream: {},
-        delete: {},
+        host: env("FTP_HOST"),
+        port: env("FTP_PORT", 21),
+        user: env("FTP_USER"),
+        password: env("FTP_PASSWORD"),
+        secure: env.bool("FTP_SECURE", false),
+        path: env("FTP_BASE_PATH"),
+        baseUrl: env("FTP_BASE_URL"),
+
+        connectionConcurrency: env("FTP_CONNECTION_CONCURRENCY", 5), // 👈 Optional. Default to 5
+        useSentry: true, // 👈 Optional. Default to false
       },
     },
   },
