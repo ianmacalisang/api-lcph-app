@@ -40,6 +40,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::download.download"
+    },
+    "subscription": {
+      "type": "date"
     }
   }
 }

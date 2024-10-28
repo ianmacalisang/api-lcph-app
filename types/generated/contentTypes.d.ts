@@ -791,6 +791,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
     firstName: Attribute.String;
     lastName: Attribute.String;
     phone: Attribute.String;
+    subscription: Attribute.Date & Attribute.DefaultTo<'2025-10-28'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

@@ -102,6 +102,10 @@
     },
     "phone": {
       "type": "string"
+    },
+    "subscription": {
+      "type": "date",
+      "default": "2025-10-28"
     }
   }
 }
