@@ -38,7 +38,7 @@ export interface FrontendPromotions extends Schema.Component {
       'oneToMany',
       'api::download.download'
     >;
-    subscription: Attribute.Date;
+    duration: Attribute.Integer & Attribute.DefaultTo<12>;
   };
 }
 

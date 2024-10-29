@@ -41,8 +41,9 @@
       "relation": "oneToMany",
       "target": "api::download.download"
     },
-    "subscription": {
-      "type": "date"
+    "duration": {
+      "type": "integer",
+      "default": 12
     }
   }
 }
